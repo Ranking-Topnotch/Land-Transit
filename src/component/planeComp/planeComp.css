@@ -1,0 +1,39 @@
+.planeComp__con{
+    padding: 2em;
+}
+.planeComp__con h1{
+    margin-bottom: 2em;
+}
+.planeComp__content{
+    display: flex;
+    margin-bottom: 2.5em;
+    cursor: pointer;
+}
+.planeComp__content img{
+    width: 20%;
+}
+.planeComp__content div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1.5em;
+}
+.planeComp__content div h3{
+    height: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;  
+    color: #161616; 
+}
+.planeComp__content div p{
+    height: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #4D4D4D;
+}

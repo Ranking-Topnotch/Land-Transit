@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.details__con{
+    display: flex;
+    align-items: center;
+    padding: 2em;
+}
+.details__con img{
+    width: 30%;
+    margin-right: 2em;
+}
+.details__nav{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 2em;
+    width: 20em;
+    
+}
+.details__nav li{
+    width: 55.62px;
+    height: 18.84px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #4D4D4D;
+}
+.nav__details{
+    text-decoration: underline;
+    
+}

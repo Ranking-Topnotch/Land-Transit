@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about{
+    padding: 2em;
+}
+.about__img{
+    background-image: url(/src/image/plane2.jpg);
+    height: 20em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about__header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #161616;
+    margin-bottom: 1em;
+}
+.about__p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #161616;
+}
+.about__section{
+    background-color: #FFCC8D;
+    border-radius: 5px;
+    padding: 1em; 
+    margin-top: 2em;
+}
+
+.about__section h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #161616;
+    margin-top: 1em;
+}
+.about__section button{  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15.9462px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #161616;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    
+}

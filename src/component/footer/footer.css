@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.footer_{
+    background-color: #252525;
+    height: 6.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_text{
+    
+     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    color: #AAAAAA;
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav__host{
+    display: flex;
+    padding: 2em;
+}
+.nav__host ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35em;
+}
+.nav__host ul li{
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #4D4D4D;
+}
+.nav__host ul li:hover{
+    text-decoration-line: underline;
+    color: #161616;
+}
