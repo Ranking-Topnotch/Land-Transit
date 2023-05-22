@@ -1,16 +1,16 @@
 import React from 'react'
 import './planeComp.css'
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
+import { getHostVans } from '../getVans'
+
+export function loader(){
+    return getHostVans()
+}
 
 
 const PlaneComp = () => {
-    const [plane, setPlane] = React.useState([])
-    React.useEffect(() => {
-        fetch('/api/host/vans') 
-        .then(res => res.json())
-        .then(data => setPlane(data.vans))
-    }, [])
-
+    const plane = useLoaderData()
+  
     const data = plane.map(planes => {
         return (
           
@@ -39,5 +39,12 @@ const PlaneComp = () => {
 }
 
 export default PlaneComp
+
+// const [plane, setPlane] = React.useState([])
+// React.useEffect(() => {
+//     fetch('/api/host/vans') 
+//     .then(res => res.json())
+//     .then(data => setPlane(data.vans))
+// }, [])
 
 

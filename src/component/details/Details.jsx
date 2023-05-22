@@ -1,13 +1,23 @@
 import React from 'react'
-import { Link, useParams, useLocation } from 'react-router-dom'
-import server from '../../server'
+import { Link, useParams, useLocation, useLoaderData } from 'react-router-dom'
+//import server from '../../server'
 import './details.css'
+import { getVans } from '../getVans'
+
+export function loader({ params }){
+  return getVans(params.id)
+}
+
 
 const Details = () => {
-  const param = useParams()
+  
   const location = useLocation()
 
-  const [ride, setRide] = React.useState(server)
+  const ride = useLoaderData()
+
+  //console.log(ride)
+
+  //const [ride, setRide] = React.useState(server)
 
 
   // this code help to go back to the filter one
@@ -19,11 +29,11 @@ const Details = () => {
   //           <Link
   //               to={`..${search}`}
 
-  React.useEffect(() => {
-    fetch(`/api/vans/${param.id}`)
-      .then(res => res.json())
-      .then(data => setRide(data.vans))
-  }, [param.id])
+  // React.useEffect(() => {
+  //   fetch(`/api/vans/${param.id}`)
+  //     .then(res => res.json())
+  //     .then(data => setRide(data.vans))
+  // }, [param.id])
   
   return (
     <div>
@@ -48,3 +58,17 @@ const Details = () => {
 }
 
 export default Details
+
+
+
+// const param = useParams()
+// const location = useLocation()
+
+// const [ride, setRide] = React.useState(server)
+
+
+ // React.useEffect(() => {
+  //   fetch(`/api/vans/${param.id}`)
+  //     .then(res => res.json())
+  //     .then(data => setRide(data.vans))
+  // }, [param.id])

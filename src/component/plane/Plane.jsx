@@ -1,36 +1,29 @@
 import React from 'react'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams, useLoaderData } from 'react-router-dom'
 import server from '../../server'
 //import Details from '../details/Details'
 import './plane.css'
 import { getVans } from '../getVans'
 
 
+export function loader(){
+  return getVans()
+}
+
+
 const Plane = () => {
-  const [rides, setRides] = React.useState([])
-  const [loadind, setLoading] = React.useState(false)
+  
   const [searchParams, setSearchParams] = useSearchParams()
   const specify = searchParams.get('type')
 
+  const rides= useLoaderData()
+
+  
+  
   const specifyData = specify 
   ? rides.filter(plane => plane.type === specify) : rides
 
-  // fetching data manually code  HAPPY PATH
-
-  // fetch('/api/vans')
-  //     .then(res => res.json())
-  //     .then(data => setRides(data.vans))
   
-  React.useEffect(() =>{
-    async function loadVans(){
-      setLoading(true)
-      const data = await getVans()
-      setRides(data)
-      setLoading(false)
-    }
-    loadVans()
-    
-  }, [])
 
   const plane = specifyData.map(ride => {
     return  <div key={ride.id} className='van'>
@@ -73,6 +66,38 @@ const Plane = () => {
 }
 
 export default Plane
+
+
+// const data = useLoaderData()
+
+// const [rides, setRides] = React.useState(data)
+// const [loading, setLoading] = React.useState(false)
+// const [error, setError] = React.useState(false)
+// const [searchParams, setSearchParams] = useSearchParams()
+// const specify = searchParams.get('type')
+
+// fetching data manually coding the HAPPY PATH
+
+  // fetch('/api/vans')
+  //     .then(res => res.json())
+  //     .then(data => setRides(data.vans))
+  
+  // React.useEffect(() =>{
+  //   async function loadVans() {
+  //     setLoading(true)
+  //     try {
+  //         const data = await getVans()
+  //         setRides(data)
+  //     } catch (err) {
+  //         setError(err)
+  //     } finally {
+  //         setLoading(false)
+  //     }
+  // }
+
+  // loadVans()    
+  // }, [])
+
 
   // function handleClick(){
   //     setSearchParams('?type=jed')

@@ -1,17 +1,16 @@
 import React from 'react'
-import { Outlet, useParams, NavLink } from 'react-router-dom'
-import server from '../../server'
+import { Outlet, useParams, NavLink, useLoaderData } from 'react-router-dom' 
+import { getVans } from '../getVans'
 import './compDetails.css'
 
+export function loader({ params }){
+  return getVans(params.id)
+}
+
 const CompDetails = () => {
-    const param = useParams()
-    const [plane, setPlane] = React.useState(server)
-    
-    React.useEffect(() => {
-        fetch(`/api/vans/${param.id}`) //'/api/host/vans'
-      .then(res => res.json())
-      .then(data => setPlane(data.vans))
-    }, [param.id])
+  const plane = useLoaderData()
+
+
   return (
    <div>
       <div>
@@ -37,3 +36,12 @@ const CompDetails = () => {
 }
 
 export default CompDetails
+
+// const param = useParams()
+    // const [plane, setPlane] = React.useState(server)
+    
+    // React.useEffect(() => {
+    //     fetch(`/api/vans/${param.id}`) //'/api/host/vans'
+    //   .then(res => res.json())
+    //   .then(data => setPlane(data.vans))
+    // }, [param.id])
