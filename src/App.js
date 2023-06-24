@@ -1,7 +1,8 @@
 import React from 'react'
-import { Home, About, Login, loginAction, loginLoader, Plane, planeLoader, Details, detailsLoader, Error, Layout, Dashboard, Incomes, Reviews, Host, PlaneComp, planeCompLoader, CompDetails, compDetailsLoader, DetailsList, Photo, Pricing } from './component/Index'
+import { Home, About, Login, loginAction, loginLoader, Plane, planeLoader, Details, detailsLoader, Error, Layout, Dashboard, dashBoard, Incomes, Reviews, Host, PlaneComp, planeCompLoader, CompDetails, compDetailsLoader, DetailsList, Photo, Pricing } from './component/Index'
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 import { requireAuth } from './component/auth'
+
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route element={<Layout />}>    
@@ -20,14 +21,15 @@ const router = createBrowserRouter(createRoutesFromElements(
                   element={<Details />} 
                   loader={detailsLoader}/>
               <Route path='host' element={<Host />}  >
-                <Route index element={<Dashboard />} loader={async () => await requireAuth()}/>
+                <Route index element={<Dashboard />} loader={dashBoard} errorElement={<Error />}/>
                 <Route path='incomes' element={<Incomes />} />
                 <Route path='planeComp' 
                     element={<PlaneComp />} 
                     loader={planeCompLoader} />
                 <Route path='planeComp/vans/:id' 
                     element={<CompDetails />}  
-                    loader={compDetailsLoader}>
+                    loader={compDetailsLoader}
+                    errorElement={<Error />}>
                   <Route index element={<DetailsList />} />
                   <Route path='planeComp/vans/:id/pricing' element={<Pricing />} />
                   <Route path='planeComp/vans/:id/photo' element={<Photo />} />
