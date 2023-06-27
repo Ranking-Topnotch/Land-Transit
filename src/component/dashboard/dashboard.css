@@ -70,3 +70,14 @@
 .host-dashboard-vans .host-vans-list {
     padding-inline: 0;
 }
+
+@media screen and (max-width: 500px) {
+    .listVans{
+        display: flex;
+
+    }
+
+    .listVans img{
+        width: 100%;
+    }
+}

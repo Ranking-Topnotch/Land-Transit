@@ -31,7 +31,6 @@
     color: black;
     font-size: 1.5rem;
     margin-top: 1em;
-    /* text-align: center; */
 }
 .home button{
     margin-top: 3em;
@@ -49,4 +48,18 @@
     text-align: center;
     color: #FFFFFF;
     cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .home button{
+        width: 20em;
+        margin-top: 1em;
+    }
+
+    .home p{
+        color: white;
+        padding: 1em;
+        border-radius: 5px;
+        background-color: rgb(114, 106, 106);
+    }
 }

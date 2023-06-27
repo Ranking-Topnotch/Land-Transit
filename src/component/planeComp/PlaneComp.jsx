@@ -26,7 +26,7 @@ const PlaneComp = () => {
                                 <section key={planes.id} >
                                    <Link to={`/host/planeComp/vans/${planes.id}`}>
                                         <div className='planeComp__content'>
-                                            <img  src={planes.imageUrl} alt='pics' />
+                                            <img  src={planes.imageUrl} alt='planes' />
                                             <div>
                                                 <h3>{planes.name}</h3>
                                                 <p>{planes.price}/day</p>

@@ -11,7 +11,7 @@ const Error = () => {
         </h2>
         <h2>{error.message}</h2>
         <h2>{error.statusText}</h2>
-        <Link to='..'><p>Return to home page</p></Link>
+        <Link to='..' href='..'><p>Return to home page</p></Link>
     </div>
   )
 }

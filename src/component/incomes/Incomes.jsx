@@ -12,7 +12,7 @@ const Incomes = () => {
     return (
       
         <section className="host-income">
-          <Link to='/host/incomes'>
+          <Link to='/host/incomes' href='/host/incomes'>
             <h1>Income</h1>
             <p>
                 Last <span>30 days</span>

@@ -77,3 +77,13 @@
     margin-top: 0.5em;
 }
 
+@media screen and (max-width: 500px) {
+    .vans{
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .plane__ul li{
+        padding: .3em 0.5em;
+    }
+}
+

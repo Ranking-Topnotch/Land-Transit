@@ -28,3 +28,9 @@
     text-decoration-line: underline;
     color: #161616;
 }
+
+@media screen and (max-width: 500px) {
+    .nav__host ul li{
+        font-size: 14px;
+    }
+}

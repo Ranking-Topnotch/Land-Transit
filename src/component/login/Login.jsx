@@ -13,7 +13,7 @@ export function loader({ request }){
 }
 
 export async function action({ request }){
-    await sleep(3000)
+    await sleep(1000)
     const formData = await request.formData()
     const email = formData.get('email')
     const password = formData.get('password')

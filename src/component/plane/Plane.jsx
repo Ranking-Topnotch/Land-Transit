@@ -35,8 +35,8 @@ const Plane = () => {
             
               const plane = specifyData.map(ride => {
                 return  <div key={ride.id} className='van'>
-                  <Link to={`/rides/${ride.id}`} state={{search: `?${searchParams.toString()}`}}>
-                      <img className='vans__img' src={ride.imageUrl} alt="pic" /> 
+                  <Link to={`/rides/${ride.id}`} href={`/rides/${ride.id}`} state={{search: `?${searchParams.toString()}`}}>
+                      <img className='vans__img' src={ride.imageUrl} alt="rides" /> 
                       <div className='prize'>
                         <h3>{ride.name}</h3>
                         <span><h3>{ride.price}</h3>/day</span>
@@ -56,8 +56,8 @@ const Plane = () => {
                       <button onClick={() => setSearchParams('type=luxury')} className={specify === 'luxury' ? 'luxury' : '' }><li>Luxury</li></button>
                       <button onClick={() => setSearchParams('type=rugged')} className={specify === 'rugged' ? 'rugged' : '' }><li>rugged</li></button>
                     </ul>
-                  { specify ?
-                  <Link to='.'><span><a>Clear filter</a></span></Link>
+                  { specify ? 
+                  <Link to='.' href='.'><span><a>Clear filter</a></span></Link>
                   : null }
                   </nav>
                   <section className='vanss'>

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Home, About, Login, loginAction, loginLoader, Plane, planeLoader, Details, detailsLoader, Error, Layout, Dashboard, dashBoard, Incomes, Reviews, Host, PlaneComp, planeCompLoader, CompDetails, compDetailsLoader, DetailsList, Photo, Pricing } from './component/Index'
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
-import { requireAuth } from './component/auth'
+import './App.css'
+
 
 
 const router = createBrowserRouter(createRoutesFromElements(

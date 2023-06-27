@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useParams, useLocation, useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
 //import server from '../../server'
 import './details.css'
 import { getVans } from '../getVans'
@@ -10,8 +10,6 @@ export function loader({ params }){
 
 
 const Details = () => {
-  
-  const location = useLocation()
 
   const ride = useLoaderData()
 
@@ -40,9 +38,9 @@ const Details = () => {
       { ride? (<div className='details' key={ride.id}>
           <section className='sections'>
             <span>&#8592;</span>
-            <Link to='/plane' >Back to all vans</Link>
+            <Link to='/plane' href='/plane' >Back to all vans</Link>
           </section>
-          <img src={ride.imageUrl} alt="pic" />
+          <img src={ride.imageUrl} alt="rides" />
           <button className={`quality ${ride.type}`}>
             {ride.type}
           </button>
